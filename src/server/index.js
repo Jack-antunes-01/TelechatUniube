@@ -15,6 +15,7 @@ class App {
     try {
       Connection.start();
 
+      this.app.use(Server.json());
       this.app.use(Router);
     } catch (error) {
       console.error(error);
